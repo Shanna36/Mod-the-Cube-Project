@@ -5,15 +5,18 @@ using UnityEngine;
 public class Cube : MonoBehaviour
 {
     public MeshRenderer Renderer;
+    public Color cubeColor = new Color (0.5f, 1.0f, 0.3f, 0.4f);
+    public Vector3 position = new Vector3(3, 4, 1);
+
     
     void Start()
     {
-        transform.position = new Vector3(3, 4, 1);
+        transform.position = (position); 
         transform.localScale = Vector3.one * 1.3f;
         
         Material material = Renderer.material;
         
-        material.color = new Color(0.5f, 1.0f, 0.3f, 0.4f);
+        material.color = cubeColor;
     }
     
     void Update()
