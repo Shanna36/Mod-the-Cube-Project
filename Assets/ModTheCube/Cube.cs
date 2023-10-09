@@ -11,12 +11,14 @@ public class Cube : MonoBehaviour
     private int colorIndex = 0;
     private float startTime;
 
+  
+
     public Color[] colors = new Color[]
 {
-    new Color(1.0f, 0.0f, 0.0f, 1.0f), // Red
-    new Color(0.0f, 1.0f, 0.0f, 1.0f), // Green
-    new Color(0.0f, 0.0f, 1.0f, 1.0f), // Blue
-    new Color(1.0f, 1.0f, 0.0f, 1.0f), // Yellow
+    new Color(1.0f, 0.0f, 0.0f, 0.05f), // Red
+    new Color(0.0f, 1.0f, 0.0f, 0.05f), // Green
+    new Color(0.0f, 0.0f, 1.0f, 0.05f), // Blue
+    new Color(1.0f, 1.0f, 0.0f, 0.05f), // Yellow
     // Add more colors as needed
 };
 
@@ -47,7 +49,9 @@ public class Cube : MonoBehaviour
             colorIndex = (colorIndex + 1) % colors.Length;
         }
 
-        transform.Rotate(10.0f * Time.deltaTime, 0.0f, 0.0f);
+        transform.Rotate(10.0f * Time.deltaTime, 0.15f, 0.0f);
+
+        
     }
 }
 
